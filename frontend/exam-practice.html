@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Practice | Computer Science Made Easy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="Computer Science Made Easy home">
+        <span class="brand-icon">&lt;/&gt;</span>
+      </a>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">HOME</a>
+        <a class="nav-link is-active" href="courses.html">COURSES</a>
+        <a class="nav-link" href="pricing.html">PRICING</a>
+        <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
+      </div>
+
+      <a class="nav-cta" href="dashboard.html"> {USER} </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- PAGE HEADER -->
+    <section class="section">
+      <h1 class="section-title">COURSES</h1>
+
+      <div class="toolbar">
+        <div class="mode-toggle" role="tablist" aria-label="Course mode">
+          <a class="btn btn-secondary" href="courses.html">LEARN</a>
+          <a class="btn btn-primary" href="exam-practice.html" aria-current="page">EXAM PRACTICE</a>
+        </div>
+
+        <div class="level-toggle" aria-label="Level">
+          <button class="level-btn is-active" type="button">HIGHER LEVEL</button>
+          <button class="level-btn" type="button">ORDINARY LEVEL</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN LAYOUT -->
+    <section class="section exam-layout">
+      <!-- LEFT: TOPICS -->
+      <aside class="panel topics-panel" aria-label="Topics">
+        <h2 class="panel-title">TOPICS</h2>
+
+        <ul class="topics-list">
+          <li><button class="topic-btn is-active" type="button">Algorithms</button></li>
+          <li><button class="topic-btn" type="button">Communications Protocols</button></li>
+          <li><button class="topic-btn" type="button">Computational Thinking</button></li>
+          <li><button class="topic-btn" type="button">Computer Systems</button></li>
+          <li><button class="topic-btn" type="button">Computers and Society</button></li>
+          <li><button class="topic-btn" type="button">Data Analysis</button></li>
+          <li><button class="topic-btn" type="button">Data Representation</button></li>
+          <li><button class="topic-btn" type="button">Databases</button></li>
+          <li><button class="topic-btn" type="button">Digital and Analogue Input</button></li>
+        </ul>
+      </aside>
+
+      <!-- RIGHT: PAST PAPERS -->
+      <section class="panel papers-panel" aria-label="Past papers">
+        <div class="papers-header">
+          <div>
+            <h2 class="panel-title">PAST PAPERS</h2>
+            <p class="panel-subtitle"><span class="year-badge">2025</span></p>
+          </div>
+        </div>
+
+        <div class="papers-grid" role="table" aria-label="Past papers grid">
+          <div class="papers-grid-head" role="row">
+            <div class="col col-label" role="columnheader"> </div>
+            <div class="col" role="columnheader">Exam Paper</div>
+            <div class="col" role="columnheader">Marking Scheme</div>
+            <div class="col" role="columnheader"> </div>
+          </div>
+
+          <div class="papers-row" role="row">
+            <div class="col col-label" role="rowheader">Mock Paper</div>
+            <div class="col">
+              <div class="paper-thumb" aria-label="Mock paper thumbnail">PDF</div>
+            </div>
+            <div class="col">
+              <div class="paper-thumb" aria-label="Mock marking scheme thumbnail">PDF</div>
+            </div>
+            <div class="col col-actions">
+              <button class="btn btn-primary btn-small" type="button">OPEN</button>
+            </div>
+          </div>
+
+          <div class="papers-row" role="row">
+            <div class="col col-label" role="rowheader">State Exam</div>
+            <div class="col">
+              <div class="paper-thumb" aria-label="State exam paper thumbnail">PDF</div>
+            </div>
+            <div class="col">
+              <div class="paper-thumb" aria-label="State marking scheme thumbnail">PDF</div>
+            </div>
+            <div class="col col-actions">
+              <button class="btn btn-primary btn-small" type="button">OPEN</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="papers-footer">
+          <button class="btn btn-secondary" type="button">SHOW MARKING SCHEME</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Computer Science Made Easy</p>
+      <div class="footer-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

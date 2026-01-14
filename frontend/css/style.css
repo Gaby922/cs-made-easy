@@ -240,3 +240,174 @@ a{ color:inherit; text-decoration:none; }
   display:flex;
   gap:12px;
 }
+
+/* ===== Exam Practice Layout ===== */
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
+
+.level-toggle{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  color: rgba(14,27,34,0.7);
+  font-weight:900;
+  letter-spacing:0.5px;
+}
+
+.level-btn{
+  background:transparent;
+  border:0;
+  padding:6px 2px;
+  cursor:pointer;
+  opacity:0.65;
+  position:relative;
+  font: inherit;
+}
+
+.level-btn.is-active{
+  opacity:1;
+  color: var(--green);
+}
+
+.level-btn.is-active::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-6px;
+  height:3px;
+  background:var(--green);
+  border-radius:999px;
+}
+
+.exam-layout{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+/* Reuse your card/panel vibe */
+.panel{
+  background:#f6f7f3;
+  border:3px solid rgba(45,86,55,0.45);
+  border-radius:22px;
+  padding:22px;
+}
+
+.panel-title{
+  margin:0 0 14px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.panel-subtitle{
+  margin:6px 0 0;
+  opacity:0.75;
+}
+
+.year-badge{
+  font-weight:900;
+  font-size:26px;
+}
+
+/* Topics list */
+.topics-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.topic-btn{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:0;
+  padding:10px 8px;
+  cursor:pointer;
+  border-radius:12px;
+  opacity:0.85;
+  border-bottom:2px solid rgba(14,27,34,0.25);
+}
+
+.topic-btn:hover{ opacity:1; }
+
+.topic-btn.is-active{
+  opacity:1;
+  color: var(--green);
+  border-bottom-color: rgba(45,86,55,0.65);
+}
+
+/* Papers grid */
+.papers-grid{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.papers-grid-head,
+.papers-row{
+  display:grid;
+  grid-template-columns: 180px 1fr 1fr 140px;
+  gap:18px;
+  align-items:center;
+}
+
+.papers-grid-head{
+  padding-bottom:10px;
+  border-bottom:2px solid rgba(14,27,34,0.25);
+  opacity:0.8;
+}
+
+.papers-row{
+  padding:18px 0;
+  border-bottom:2px solid rgba(14,27,34,0.25);
+}
+
+.col-label{
+  font-weight:900;
+  opacity:0.85;
+}
+
+.paper-thumb{
+  height:96px;
+  border:2px solid rgba(14,27,34,0.25);
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  opacity:0.75;
+}
+
+.col-actions{
+  display:flex;
+  justify-content:flex-start;
+}
+
+.btn-small{
+  padding:10px 14px;
+  font-size:14px;
+}
+
+.papers-footer{
+  margin-top:16px;
+  display:flex;
+  justify-content:center;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .exam-layout{ grid-template-columns: 1fr; }
+  .papers-grid-head,
+  .papers-row{ grid-template-columns: 1fr 1fr; }
+  .col-actions{ grid-column: 1 / -1; }
+  .col-label{ grid-column: 1 / -1; }
+}
+
